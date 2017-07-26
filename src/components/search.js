@@ -8,7 +8,8 @@ export default class Search extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            searchItem: ''
+            searchItem: '',
+            searchHistory: []
         };
     }
     onChange(searchItem) {
@@ -16,10 +17,16 @@ export default class Search extends React.Component {
             searchItem
         });
     }
+    onSubmit(e){
+        e.preventDefault();
+        this.setState({
+            searchHistory: [...this.state.searchHistory, this.state.searchItem]
+        })
+    }
     render() {
        return (
         <div className='Search'>
-            <SearchForm onChange={searchItem => this.onChange(searchItem)} />
+            <SearchForm onChange={searchItem => this.onChange(searchItem)} onSubmit={e => this.onSubmit(e)}/>
             <Output value={this.state.searchItem}/>
         </div>
        );
