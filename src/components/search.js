@@ -18,11 +18,13 @@ export default class Search extends React.Component {
         });
     }
     onSubmit(e){
+        console.log('this is working')
         e.preventDefault();
         this.setState({
             searchHistory: [...this.state.searchHistory, this.state.searchItem]
         })
     }
+    
     render() {
        return (
         <div className='Search'>

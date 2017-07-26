@@ -22,7 +22,7 @@ export default function SearchForm(props) {
 
     
     return (
-      <form onSubmit={props.onSubmit}>
+      <form onSubmit={e => props.onSubmit(e)}>
         <label htmlFor='Search-Form'>Search</label>
         <input 
             type='search' 
