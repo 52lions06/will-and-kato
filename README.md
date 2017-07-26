@@ -23,10 +23,10 @@
 - User can type in hot dog and it will display `Hot Dog` 
 - User does not type in hot dog and it will display `Not Hot Dog`
 
+3 form submits, reset form
 
 ### Data
 
 - Created in JSON
 - Name 1 has star rating of one....Name 2 has start rating of two .... etc. 
-
 
